@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студія</title>
-    <link
-      rel="stylesheet"
-      href="node_modules/modern-normalize/modern-normalize.css"
-    />
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -40,11 +37,17 @@
         <ul class="list header-address">
           <li class="nav-items">
             <a href="mailto:info@devstudio.com" class="nav-address">
+              <svg class="icon icon-envelope" width="16" height="16">
+                <use xlink:href="./images/icons.svg#icon-envelope"></use>
+              </svg>
               info@devstudio.com
             </a>
           </li>
           <li class="nav-items">
             <a href="tel:+380961111111" class="nav-address">
+              <svg class="icon icon-phone" width="16" height="16">
+                <use xlink:href="./images/icons.svg#icon-phone"></use>
+              </svg>
               +38 096 111 11 11
             </a>
           </li>
@@ -99,9 +102,7 @@
                   width="370"
                 />
                 <div class="portfolio-info">
-                  <h2 class="portfolio-title">
-                    Постер New Orlean vs Golden Star
-                  </h2>
+                  <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
                   <p class="portfolio-text">Дизайн</p>
                 </div>
               </a>
@@ -212,31 +213,59 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <a href="./index.html" lang="en" class="logo">
-          <span class="logo-accent">Web</span>Studio
-        </a>
-        <address class="address">
-          <ul class="list">
-            <li class="address-items">
-              <a
-                href="https://goo.gl/maps/Vfk3iaPY69gmRe3H6"
-                class="addrem-map"
-              >
-                м. Київ, пр-т Лесі Українки, 26</a
-              >
-            </li>
-            <li class="address-items">
-              <a href="mailto:info@devstudio.com" class="address-link">
-                info@devstudio.com
+        <div>
+          <a href="./index.html" lang="en" class="logo">
+            <span class="logo-accent">Web</span>Studio
+          </a>
+          <address class="address">
+            <ul class="list">
+              <li class="address-items">
+                <a href="https://goo.gl/maps/Vfk3iaPY69gmRe3H6" class="addrem-map">
+                  м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="address-items">
+                <a href="mailto:info@devstudio.com" class="address-link"> info@devstudio.com </a>
+              </li>
+              <li class="address-items">
+                <a href="tel:+380961111111" class="address-link"> +38 096 111 11 11 </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social">
+          <span class="social-title">приєднуйтесь</span>
+          <ul class="list social-list">
+            <li class="social-items">
+              <a href="#" class="social-linc">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="./images/icons.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
-            <li class="address-items">
-              <a href="tel:+380961111111" class="address-link">
-                +38 096 111 11 11
+            <li class="social-items">
+              <a href="#" class="social-linc">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-items">
+              <a href="#" class="social-linc">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-items">
+              <a href="#" class="social-linc">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
               </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>

@@ -16,18 +16,18 @@
   --primary-bg-color: #f5f4fa;
   --primary-white-color: #ffffff;
   --primary-black-color: #2f303a;
+  --primary-icon-color: #afb1b8;
 }
 /* базові списки */
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
-
 
 body {
   margin: 0;
@@ -53,6 +53,15 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.icon {
+  display: inline-block;
+  /* width: 1em;
+  height: 1em; */
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 .visually-hidden {
@@ -130,7 +139,7 @@ p {
   margin-right: 93px;
 
   color: #000000;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -162,9 +171,10 @@ p {
 
 .nav-linc,
 .nav-address {
-  display: inline-block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 .nav-linc:hover,
 .nav-linc:focus {
@@ -198,6 +208,14 @@ p {
   color: var(--accent-color);
 }
 
+.icon-envelope {
+  margin-right: 10px;
+}
+
+.icon-phone {
+  margin-right: 7px;
+}
+
 /* Main */
 
 /* Section */
@@ -213,9 +231,14 @@ p {
 /* Шапка */
 /* Герой */
 .hero {
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--primary-black-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -275,6 +298,18 @@ p {
 .feature-items {
   width: 270px;
 }
+
+.cotainer-icon {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--primary-bg-color);
+}
+
 /* Відступи для всіх списків */
 .feature-items:not(.feature-items:last-child),
 .examples-items:not(.examples-items:last-child),
@@ -309,7 +344,8 @@ p {
   background-color: var(--primary-bg-color);
 }
 
-.team-list {
+.team-list,
+.social-list {
   display: flex;
 }
 
@@ -337,13 +373,79 @@ p {
 }
 
 .team-text {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
-/* Портфоліо*/
+.social-list {
+  display: flex;
+  justify-content: center;
+}
 
+.social-items {
+  display: flex;
+  width: 44px;
+  height: 44px;
+}
+
+.social-items:not(.social-items:last-child) {
+  margin-right: 10px;
+}
+
+.social-linc {
+  padding: 12px;
+  border-radius: 50%;
+
+  color: var(--primary-icon-color);
+}
+
+.social-linc:hover,
+.social-linc:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+/* Постійні клієнти */
+.company-list {
+  display: flex;
+}
+
+.company-imems {
+  display: flex;
+  width: 170px;
+  height: 92px;
+}
+
+.company-imems:not(.company-imems:last-child) {
+  margin-right: 30px;
+}
+
+.company-linc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
+
+  color: var(--primary-icon-color);
+}
+
+.company-linc:hover,
+.company-linc:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.company-linc .svg {
+  margin: auto;
+}
+
+/* Портфоліо*/
 .button-list {
   display: flex;
   justify-content: center;
@@ -361,6 +463,12 @@ p {
 
 .portfolio-items {
   width: 370px;
+}
+
+.portfolio-items:hover,
+.portfolio-items:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-items:not(.portfolio-items:nth-child(3n)) {
@@ -420,6 +528,11 @@ p {
   color: var(--primary-white-color);
 }
 
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
 .address {
   font-style: normal;
 }
@@ -442,4 +555,31 @@ p {
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
+}
+
+.social-title {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.footer-social > .social-list {
+  justify-content: flex-start;
+}
+
+.footer-social .social-linc {
+  background-color: #44454e;
+  color: var(--primary-white-color);
+}
+
+.footer-social .social-linc:hover,
+.footer-social .social-linc:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-social {
+  margin-left: 70px;
 }
